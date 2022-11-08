@@ -6,6 +6,7 @@ import Mint from '../components/Mint';
 import About from '../components/About';
 import ExampleSlide from '../components/ExampleSlide';
 import Faq from '../components/Faq';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <About/>
       <ExampleSlide/>
       <Faq/>
+      <Footer/>
     </div>
   )
 }
