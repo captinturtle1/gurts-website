@@ -1,6 +1,6 @@
 export default function Navbar() {
     return (
-      <div className="z-[2] fixed top-0 w-screen flex h-16 bg-white text-black select-none">
+      <div className="z-[100] fixed top-0 w-screen flex h-16 bg-white text-black select-none">
         <div className="flex absolute h-16 ">
             <img src="YV_LOGO2.png" className="h-10 my-auto ml-16 cursor-pointer"/>
             <div className="font-bold my-auto text-2xl cursor-pointer">Gurts</div>
