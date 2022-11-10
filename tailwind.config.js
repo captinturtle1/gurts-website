@@ -22,6 +22,11 @@ module.exports = {
         }
       }
     },
+    fontFamily: {
+      'sans': ['Helvetica', 'Arial', 'sans-serif'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular']
+    }
   },
   plugins: [],
 }

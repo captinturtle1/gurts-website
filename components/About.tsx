@@ -1,13 +1,13 @@
-import Wave from '../public/wave.svg';
+import Wave from '../public/wave3.svg';
 
 export default function About() {
   return (
     <div className="relative h-[900px] grid grid-cols-10 z-[3]">
-        <svg className="absolute w-[1920px] h-[1080px] fill-blue-500 top-[-180px] left-0 drop-shadow-[0px_-10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
+        <svg className="absolute w-screen h-[1080px] fill-blue-500 top-[-180px] left-0 drop-shadow-[0px_-10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
         <img src="milkbox.png" className="absolute w-24 top-32 right-32 animate-wiggle"/>
         <div className="relative mx-24 my-36 col-span-5">
             <img src="Ex1.png" className="absolute top-0 left-20 w-96 rounded-full drop-shadow-lg"/>
-            <img src="Ex2.png" className="absolute right-10 top-32 w-96 rounded-full drop-shadow-lg"/>
+            <img src="Ex2.png" className="absolute left-80 top-32 w-96 rounded-full drop-shadow-lg"/>
             <img src="Ex3.png" className="absolute top-72 left-24 w-96 rounded-full drop-shadow-lg"/>
             <div className="absolute top-[120px] right-0 w-2 h-96 bg-pink-200 rounded-full "></div>
         </div>

@@ -1,25 +1,57 @@
+import { useState } from 'react';
+import { FiArrowDownRight } from 'react-icons/fi';
+
 import Wave from '../public/wave2.svg';
 
 export default function Faq() {
+    const [currentBox, setCurrentBox] = useState(0);
+
+    const handleBoxClick = (boxNum:number) => {
+        if (currentBox != boxNum) {
+            setCurrentBox(boxNum);
+        } else {
+            setCurrentBox(0);
+        }
+    }
     return (
-        <div className="relative h-[900px] grid grid-cols-2 z-[3]">
-            <svg className="absolute w-[1920px] h-[1080px] fill-emerald-500 left-0 drop-shadow-[0px_10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
+        <div className="relative h-[950px] grid grid-cols-2 p-44 z-[3]">
+            <svg className="absolute w-screen h-[1080px] fill-emerald-500 left-0 drop-shadow-[0px_10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
             <img src="yogurt.png" className="absolute w-24 bottom-0 left-32 animate-wiggle"/>
             <div className="m-auto z-[2]">
-                <div className="text-8xl font-bold flex just justify-center drop-shadow-lg">Faq</div>
-                <div className="w-full h-4 bg-[#8f6464] rounded-full my-5"></div>
-                <div className="w-[500px] font-semibold text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                <div className="text-9xl font-bold flex just justify-center drop-shadow-lg">Faq</div>
+                <div className="w-full h-4 bg-[#8f6464] rounded-full my-10"></div>
+                <div className="w-[600px] font-semibold text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet. {currentBox}</div>
             </div>
-            <div className="m-auto grid grid-cols-2 gap-3 font-bold text-xl">
-                <div className="z-[2] flex flex-col gap-3">
-                    <div className="bg-[#8f6464] py-3 px-10 rounded-full">Lorem ipsum</div>
-                    <div className="bg-[#8f6464] py-3 px-10 rounded-full">Lorem ipsum</div>
-                    <div className="bg-[#8f6464] py-3 px-10 rounded-full">Lorem ipsum</div>
+            <div className="z-[2] m-auto font-bold text-xl select-none transition-all">
+                <div onClick={() => handleBoxClick(1)} className={currentBox != 1 ? "bg-[#8f6464] h-12 w-[600px] px-4 py-[10px] rounded-xl transition-all relative visible my-2" : "bg-[#b18181] h-64 w-[600px] p-5 rounded-xl items-center transition-all relative visible"}>
+                    <div className={currentBox == 1 ? "transition-all" : "grow transition-all"}>Lorem ipsum</div>
+                    <div className={currentBox == 1 ? "mt-5 opacity-100 visible transition-all delay-100" : "opacity-0 w-0 invisible"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                    <FiArrowDownRight className={currentBox == 1 ? "rotate-180 transition-all absolute bottom-5 right-5" : "rotate-0 absolute bottom-[12px] right-5 transition-all"}/>
                 </div>
-                <div className="z-[2] flex flex-col gap-3">
-                    <div className="bg-[#8f6464] py-3 px-10 rounded-full">Lorem ipsum</div>
-                    <div className="bg-[#8f6464] py-3 px-10 rounded-full ">Lorem ipsum</div>
-                    <div className="bg-[#8f6464] py-3 px-10 rounded-full">Lorem ipsum</div>
+                <div onClick={() => handleBoxClick(2)} className={currentBox != 2 ? "bg-[#8f6464] h-12 w-[600px] px-4 py-[10px] rounded-xl transition-all relative visible my-2" : "bg-[#b18181] h-64 w-[600px] p-5 rounded-xl items-center transition-all relative visible"}>
+                    <div className={currentBox == 2 ? "transition-all" : "grow transition-all"}>Lorem ipsum</div>
+                    <div className={currentBox == 2 ? "mt-5 opacity-100 visible transition-all delay-100" : "opacity-0 w-0 invisible"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                    <FiArrowDownRight className={currentBox == 2 ? "rotate-180 transition-all absolute bottom-5 right-5" : "rotate-0 absolute bottom-[12px] right-5 transition-all"}/>
+                </div>
+                <div onClick={() => handleBoxClick(3)} className={currentBox != 3 ? "bg-[#8f6464] h-12 w-[600px] px-4 py-[10px] rounded-xl transition-all relative visible my-2" : "bg-[#b18181] h-64 w-[600px] p-5 rounded-xl items-center transition-all relative visible"}>
+                    <div className={currentBox == 3 ? "transition-all" : "grow transition-all"}>Lorem ipsum</div>
+                    <div className={currentBox == 3 ? "mt-5 opacity-100 visible transition-all delay-100" : "opacity-0 w-0 invisible"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                    <FiArrowDownRight className={currentBox == 3 ? "rotate-180 transition-all absolute bottom-5 right-5" : "rotate-0 absolute bottom-[12px] right-5 transition-all"}/>
+                </div>
+                <div onClick={() => handleBoxClick(4)} className={currentBox != 4 ? "bg-[#8f6464] h-12 w-[600px] px-4 py-[10px] rounded-xl transition-all relative visible my-2" : "bg-[#b18181] h-64 w-[600px] p-5 rounded-xl items-center transition-all relative visible"}>
+                    <div className={currentBox == 4 ? "transition-all" : "grow transition-all"}>Lorem ipsum</div>
+                    <div className={currentBox == 4 ? "mt-5 opacity-100 visible transition-all delay-100" : "opacity-0 w-0 invisible"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                    <FiArrowDownRight className={currentBox == 4 ? "rotate-180 transition-all absolute bottom-5 right-5" : "rotate-0 absolute bottom-[12px] right-5 transition-all"}/>
+                </div>
+                <div onClick={() => handleBoxClick(5)} className={currentBox != 5 ? "bg-[#8f6464] h-12 w-[600px] px-4 py-[10px] rounded-xl transition-all relative visible my-2" : "bg-[#b18181] h-64 w-[600px] p-5 rounded-xl items-center transition-all relative visible"}>
+                    <div className={currentBox == 5 ? "transition-all" : "grow transition-all"}>Lorem ipsum</div>
+                    <div className={currentBox == 5 ? "mt-5 opacity-100 visible transition-all delay-100" : "opacity-0 w-0 invisible"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                    <FiArrowDownRight className={currentBox == 5 ? "rotate-180 transition-all absolute bottom-5 right-5" : "rotate-0 absolute bottom-[12px] right-5 transition-all"}/>
+                </div>
+                <div onClick={() => handleBoxClick(6)} className={currentBox != 6 ? "bg-[#8f6464] h-12 w-[600px] px-4 py-[10px] rounded-xl transition-all relative visible my-2" : "bg-[#b18181] h-64 w-[600px] p-5 rounded-xl items-center transition-all relative visible"}>
+                    <div className={currentBox == 6 ? "transition-all" : "grow transition-all"}>Lorem ipsum</div>
+                    <div className={currentBox == 6 ? "mt-5 opacity-100 visible transition-all delay-100" : "opacity-0 w-0 invisible"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum tincidunt lectus luctus vestibulum. Donec mollis nisl nec elit vestibulum, ut rutrum purus aliquet.</div>
+                    <FiArrowDownRight className={currentBox == 6 ? "rotate-180 transition-all absolute bottom-5 right-5" : "rotate-0 absolute bottom-[12px] right-5 transition-all"}/>
                 </div>
             </div>
         </div>

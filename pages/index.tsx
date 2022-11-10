@@ -13,8 +13,8 @@ export default function Home() {
     <div>
       <Head>
         <title>Gurts</title>
-        <meta name="description" content="Gurts webpage" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Gurts webpage"/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
       <Navbar/>
       <Landing/>
