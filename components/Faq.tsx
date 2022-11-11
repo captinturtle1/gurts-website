@@ -14,8 +14,8 @@ export default function Faq() {
         }
     }
     return (
-        <div className="relative h-[950px] grid grid-cols-1 lg:grid-cols-2 p-6 lg:p-44 z-[3]">
-            <svg className="absolute w-screen h-[1080px] fill-emerald-500 left-0 drop-shadow-[0px_10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
+        <div id="Faq" className="relative h-[1050px] 2xl:h-[950px] grid grid-cols-1 2xl:grid-cols-2 p-6 lg:p-44 z-[3] gap-10">
+            <svg className="absolute w-screen h-[1300px] 2xl:h-[1080px] fill-emerald-500 left-0 drop-shadow-[0px_10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
             <img src="yogurt.png" className="absolute w-10 lg:w-24 bottom-0 left-4 lg:left-32 animate-wiggle"/>
             <div className="m-auto z-[2]">
                 <div className="text-9xl font-bold flex just justify-center drop-shadow-lg">Faq</div>

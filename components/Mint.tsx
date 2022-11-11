@@ -2,7 +2,7 @@ import Wave from '../public/wave.svg';
 
 export default function Navbar() {
     return (
-      <div className="relative h-[1100px] grid grid-cols-1 lg:grid-cols-3">
+      <div id="Mint" className="relative h-[1100px] grid grid-cols-1 lg:grid-cols-3">
         <svg className="absolute w-screen h-[1080px] fill-pink-200 z-[1] drop-shadow-[0px_-10px_10px_rgba(0,0,0,0.25)]"><Wave/></svg>
         <div className="relative col-span-1 z-[2]">
             <img src="bgyogurtformint2.png" className="absolute bottom-10 left-16 w-[600px] hidden lg:block"/>
