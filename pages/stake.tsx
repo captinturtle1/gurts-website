@@ -19,8 +19,10 @@ export default function Navbar() {
             </div>
         </div>
         <div className="h-screen bg-[#765050] flex">
-            <div className="bg-[#c0a9a9] w-full mx-64 my-32 drop-shadow-xl">
-                yup
+            <div className="bg-[#c0a9a9] w-full mx-64 my-32 drop-shadow-xl rounded-3xl grid grid-cols-3">
+                <div className="bg-zinc-600 m-10 rounded-xl"></div>
+                <div className="bg-zinc-500 m-10 rounded-xl"></div>
+                <div className="bg-zinc-400 m-10 rounded-xl"></div>
             </div>
         </div>
       </div>

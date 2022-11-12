@@ -12,7 +12,7 @@ export default function About() {
           <img src="Ex3.png" className="absolute min-w-[150px] top-[60%] lg:top-[45%] left-[15%] w-[25%] lg:w-[50%] max-w-[400px] rounded-full drop-shadow-lg"/>
         </div>
       </div>
-      <div className="my-auto flex gap-10 p-10 lg:p-0 my-auto z-[2]">
+      <div className="my-auto flex gap-10 p-10 lg:p-0 z-[2]">
         <div className="top-[120px] right-0 w-2 h-96 bg-pink-200 rounded-full "></div>
         <div>
           <div className="text-4xl lg:text-5xl font-bold my-5 flex">About</div>
